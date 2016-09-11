@@ -29,24 +29,24 @@
         android:src="@drawable/a" />
 
     <TextView
-        android:id="@+id/textViewnama"
+        android:id="@+id/textViewNama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/editTextnama"
+        android:layout_alignTop="@+id/editTextNama"
         android:text="Nama : "
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="@dimen/abc_text_size_title_material_toolbar" />
 
     <EditText
-        android:id="@+id/editTextnama"
+        android:id="@+id/editTextNama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/textViewjudul"
-        android:layout_toRightOf="@+id/textViewnama" />
+        android:layout_toRightOf="@+id/textViewNama" />
 
     <Spinner
         android:id="@+id/spinnerpengalaman"
@@ -180,24 +180,12 @@
         android:text="TAMPILKAN" />
 
     <TextView
-        android:id="@+id/textViewHasil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/radioGroup"
-        android:layout_alignEnd="@+id/editTextnama"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/editTextnama"
-        android:layout_below="@+id/buttonTampilkan"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
         android:id="@+id/textViewUsia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/editTextnama"
+        android:layout_below="@+id/editTextNama"
         android:text="Usia : "
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="@dimen/abc_text_size_title_material_toolbar" />
@@ -207,9 +195,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/spinnerpengalaman"
-        android:layout_alignLeft="@+id/editTextnama"
+        android:layout_alignLeft="@+id/editTextNama"
         android:layout_alignRight="@+id/spinnerpengalaman"
-        android:layout_alignStart="@+id/editTextnama"
+        android:layout_alignStart="@+id/editTextNama"
         android:layout_alignTop="@+id/textViewUsia" />
+
+    <TextView
+        android:id="@+id/textViewHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/radioGroup"
+        android:layout_alignEnd="@+id/editTextUsia"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/editTextUsia"
+        android:layout_below="@+id/buttonTampilkan"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

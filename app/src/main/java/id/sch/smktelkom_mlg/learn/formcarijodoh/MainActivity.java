@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etNama = (EditText) findViewById(R.id.editTextnama);
+        etNama = (EditText) findViewById(R.id.editTextNama);
         etUsia = (EditText) findViewById(R.id.editTextUsia)
     }
 }

@@ -49,19 +49,19 @@
         android:layout_toRightOf="@+id/textViewnama" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinnerpengalaman"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editTextnama"
-        android:layout_alignRight="@+id/editTextnama"
-        android:layout_below="@+id/editTextnama"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewUsia"
         android:spinnerMode="dropdown" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/spinner"
+        android:layout_below="@+id/spinnerpengalaman"
         android:layout_toLeftOf="@+id/imageViewhati"
         android:layout_toStartOf="@+id/imageViewhati">
 
@@ -146,7 +146,7 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/checkBoxAlim"
         android:layout_alignRight="@+id/checkBoxAlim"
-        android:layout_below="@+id/spinner"
+        android:layout_below="@+id/spinnerpengalaman"
         android:layout_gravity="center_horizontal"
         android:text="Tipe Pasangan "
         android:textColor="@android:color/holo_orange_dark"
@@ -190,5 +190,26 @@
         android:layout_alignRight="@+id/editTextnama"
         android:layout_below="@+id/buttonTampilkan"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textViewUsia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editTextnama"
+        android:text="Usia : "
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="@dimen/abc_text_size_title_material_toolbar" />
+
+    <EditText
+        android:id="@+id/editTextUsia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/spinnerpengalaman"
+        android:layout_alignLeft="@+id/editTextnama"
+        android:layout_alignRight="@+id/spinnerpengalaman"
+        android:layout_alignStart="@+id/editTextnama"
+        android:layout_alignTop="@+id/textViewUsia" />
 
 </RelativeLayout>

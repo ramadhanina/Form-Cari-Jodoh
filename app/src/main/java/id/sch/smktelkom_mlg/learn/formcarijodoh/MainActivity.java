@@ -3,7 +3,6 @@ package id.sch.smktelkom_mlg.learn.formcarijodoh;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -13,7 +12,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    EditText etNama, etUsia;
+    EditText etNama;
+    EditText etUsia;
     TextView tvHasil;
     RadioButton rbWanita, rbPria;
     RadioGroup rgGender;
@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     Spinner spPengalaman;
     Button bTampilkan;
 
-    ArrayAdapter<String> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
         cbSerius = (CheckBox) findViewById(R.id.checkBoxSerius);
         cbBerkarir = (CheckBox) findViewById(R.id.checkBoxBerkarir);
         spPengalaman = (Spinner) findViewById(R.id.spinnerpengalaman);
-        )
-
+        bTampilkan = (Button) findViewById(R.id.buttonTampilkan);
         bTampilkan.setOnClickListener(new View.OnClickListener() {
                                           @Override
                                           public void onClick(View v) {
+
                                               doProcess();
                                           }
                                       }
@@ -55,9 +54,8 @@ public class MainActivity extends AppCompatActivity {
         if (isValid()) {
             String Nama = etNama.getText().toString();
             String Usia = etUsia.getText().toString();
-            String gender = null;
             String tipe = "Tipe Pasangan Saya adalah ";
-            tvHasil.setText("Saya " + Nama + " berusia " + Usia + "tahun." + "Saya adalah seorang" + gender + "tulen, " + tipe + ".Pengalaman pahit yang pernah saya alami adalah" + spPengalaman.getSelectedItem().toString());
+            tvHasil.setText("Saya " + Nama + ", saya berusia " + Usia + " tahun." + ".Pengalaman pahit yang pernah saya alami adalah " + spPengalaman.getSelectedItem().toString());
         }
 }
     private boolean isValid() {
@@ -86,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             etUsia.setError(null);
         }
-
         if (rgGender.getCheckedRadioButtonId() != -1) {
             RadioButton rb = (RadioButton)
                     findViewById(rgGender.getCheckedRadioButtonId());

@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <RelativeLayout
-    android:background="@android:color/background_light"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="id.sch.smktelkom_mlg.learn.formcarijodoh.MainActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="id.sch.smktelkom_mlg.learn.formcarijodoh.MainActivity">
 
     <TextView
         android:id="@+id/textViewjudul"
@@ -18,6 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageViewhati"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:text="Cari Jodoh"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="@dimen/abc_text_size_headline_material" />
@@ -28,6 +32,7 @@
         android:layout_height="100dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:src="@drawable/a" />
 
     <TextView
@@ -43,24 +48,58 @@
 
     <EditText
         android:id="@+id/editTextNama"
-        android:layout_width="wrap_content"
+        android:layout_width="206dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/textViewjudul"
         android:layout_toRightOf="@+id/textViewNama" />
 
-    <Spinner
+        <TextView
+            android:id="@+id/textViewUsia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editTextNama"
+            android:text="Usia : "
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="@dimen/abc_text_size_title_material_toolbar" />
+
+        <EditText
+            android:id="@+id/editTextUsia"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/spinnerpengalaman"
+            android:layout_alignLeft="@+id/editTextNama"
+            android:layout_alignRight="@+id/spinnerpengalaman"
+            android:layout_alignStart="@+id/editTextNama"
+            android:layout_alignTop="@+id/textViewUsia"
+            android:inputType="numberSigned" />
+
+        <Spinner
         android:id="@+id/spinnerpengalaman"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textViewUsia"
-        android:entries="@array/pengalaman"
+            android:entries="@array/Pengalaman"
         android:spinnerMode="dropdown" />
 
-    <CheckBox
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="119dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/spinnerpengalaman"
+            android:layout_gravity="center_horizontal"
+            android:text="Tipe Pasangan "
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="@dimen/abc_text_size_subhead_material" />
+
+        <CheckBox
         android:id="@+id/checkBoxRomantis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -78,7 +117,7 @@
         android:checked="false"
         android:text="Alim" />
 
-    <CheckBox
+        <CheckBox
         android:id="@+id/checkBoxHumoris"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -108,19 +147,7 @@
         android:checked="false"
         android:text="Serius" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="119dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/spinnerpengalaman"
-        android:layout_gravity="center_horizontal"
-        android:text="Tipe Pasangan "
-        android:textColor="@android:color/holo_orange_dark"
-        android:textSize="@dimen/abc_text_size_subhead_material" />
-
-    <CheckBox
+        <CheckBox
         android:id="@+id/checkBoxBerkarir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -130,80 +157,24 @@
         android:checked="false"
         android:text="Berkarir" />
 
-    <ScrollView
+        <TextView
+            android:id="@+id/textViewjk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerpengalaman"
+            android:layout_toEndOf="@+id/buttonTampilkan"
+            android:layout_toRightOf="@+id/buttonTampilkan"
+            android:text="Jenis Kelamin"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="@dimen/abc_text_size_subhead_material" />
+
+        <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/checkBoxSerius"
         android:layout_toEndOf="@+id/checkBoxSetia"
         android:layout_toRightOf="@+id/checkBoxSetia" />
-
-    <Button
-        android:id="@+id/buttonTampilkan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/checkBoxSetia"
-        android:layout_toEndOf="@+id/textView"
-        android:layout_toRightOf="@+id/textView"
-        android:text="TAMPILKAN" />
-
-    <TextView
-        android:id="@+id/textViewUsia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/editTextNama"
-        android:text="Usia : "
-        android:textColor="@android:color/holo_orange_dark"
-        android:textSize="@dimen/abc_text_size_title_material_toolbar" />
-
-    <EditText
-        android:id="@+id/editTextUsia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/spinnerpengalaman"
-        android:layout_alignLeft="@+id/editTextNama"
-        android:layout_alignRight="@+id/spinnerpengalaman"
-        android:layout_alignStart="@+id/editTextNama"
-        android:layout_alignTop="@+id/textViewUsia"
-        android:inputType="numberSigned" />
-
-    <TextView
-        android:id="@+id/textViewHasil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editTextUsia"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/editTextUsia"
-        android:layout_below="@+id/buttonTampilkan"
-        android:layout_toLeftOf="@id/buttonTampilkan"
-        android:layout_toStartOf="@+id/buttonTampilkan"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        tools:text="Hasil" />
-
-    <RadioGroup
-        android:id="@+id/radioGroupGender"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/textViewHasil"
-        android:layout_below="@+id/spinnerpengalaman"
-        android:layout_toEndOf="@+id/buttonTampilkan"
-        android:layout_toRightOf="@+id/buttonTampilkan">
-
-        <TextView
-            android:id="@+id/textViewjk"
-            android:layout_width="119dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/spinnerpengalaman"
-            android:layout_gravity="center_horizontal"
-            android:layout_toEndOf="@+id/buttonTampilkan"
-            android:layout_toRightOf="@+id/buttonTampilkan"
-            android:text="Jenis Kelamin"
-            android:textColor="@android:color/holo_orange_dark"
-            android:textSize="@dimen/abc_text_size_subhead_material" />
 
         <RadioButton
             android:id="@+id/radioButtonPria"
@@ -218,7 +189,40 @@
             android:layout_height="wrap_content"
             android:checked="false"
             android:text="Wanita" />
+
+        <Button
+        android:id="@+id/buttonTampilkan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGroupGender"
+            android:layout_gravity="center_horizontal"
+            android:layout_toEndOf="@+id/textViewjudul"
+            android:layout_toRightOf="@+id/textViewjudul"
+            android:text="TAMPILKAN" />
+
+        <TextView
+        android:id="@+id/textViewHasil"
+            android:layout_width="354dp"
+        android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/radioGroupGender"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/radioGroupGender"
+        android:layout_below="@+id/buttonTampilkan"
+        android:layout_toStartOf="@+id/buttonTampilkan"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:text="Hasil" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupGender"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/checkBoxSetia"
+        android:layout_below="@+id/spinnerpengalaman"
+        android:layout_toEndOf="@+id/buttonTampilkan"
+        android:layout_toRightOf="@+id/buttonTampilkan">
+
     </RadioGroup>
 
-</RelativeLayout>
+    </LinearLayout>
 </ScrollView>

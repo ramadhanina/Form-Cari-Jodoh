@@ -170,4 +170,25 @@
         android:layout_toEndOf="@+id/checkBoxSetia"
         android:layout_toRightOf="@+id/checkBoxSetia" />
 
+    <Button
+        android:id="@+id/buttonTampilkan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/checkBoxRomantis"
+        android:layout_alignRight="@+id/checkBoxRomantis"
+        android:layout_below="@+id/scrollView"
+        android:text="TAMPILKAN" />
+
+    <TextView
+        android:id="@+id/textViewHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/radioGroup"
+        android:layout_alignEnd="@+id/editTextnama"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/editTextnama"
+        android:layout_below="@+id/buttonTampilkan"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
 </RelativeLayout>

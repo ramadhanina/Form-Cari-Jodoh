@@ -5,11 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     EditText etNama, etUsia;
     TextView tvHasil;
+    RadioButton rbWanita, rbPria;
 
     Button bTampilkan;
 
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         etNama = (EditText) findViewById(R.id.editTextNama);
         etUsia = (EditText) findViewById(R.id.editTextUsia);
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
+        rbWanita = (RadioButton) findViewById(R.id.radioButtonWanita);
+        rbPria = (RadioButton) findViewById(R.id.radioButtonPria);
 
         bTampilkan.setOnClickListener(new View.OnClickListener() {
                                           @Override
@@ -35,14 +39,15 @@ public class MainActivity extends AppCompatActivity {
         if (isValid()) {
             String Nama = etNama.getText().toString();
             String Usia = etUsia.getText().toString();
-            tvHasil.setText("Saya " + Nama + " berusia " + Usia + "tahun");
+            String gender = null;
+            tvHasil.setText("Saya " + Nama + " berusia " + Usia + "tahun." + "Saya adalah seorang" + gender + "tulen");
         }
 }
-
     private boolean isValid() {
         boolean valid = true;
         String Nama = etNama.getText().toString();
         String Usia = etUsia.getText().toString();
+        String gender = null;
 
         if (Nama.isEmpty()) {
             etNama.setError("Nama belum diisi");
@@ -61,6 +66,17 @@ public class MainActivity extends AppCompatActivity {
             valid = false;
         } else {
             etUsia.setError(null);
+        }
+
+        if (rbWanita.isChecked()) {
+            gender = rbWanita.getText().toString();
+        } else if (rbPria.isChecked()) {
+            gender = rbPria.getText().toString();
+        }
+        if (gender == null) {
+            tvHasil.setText("Anda belum menentukan gender");
+        } else {
+            tvHasil.setText(" Saya adalah seorang " + gender);
         }
         return valid;
     }

@@ -198,7 +198,8 @@
         android:layout_alignLeft="@+id/editTextNama"
         android:layout_alignRight="@+id/spinnerpengalaman"
         android:layout_alignStart="@+id/editTextNama"
-        android:layout_alignTop="@+id/textViewUsia" />
+        android:layout_alignTop="@+id/textViewUsia"
+        android:inputType="numberSigned" />
 
     <TextView
         android:id="@+id/textViewHasil"

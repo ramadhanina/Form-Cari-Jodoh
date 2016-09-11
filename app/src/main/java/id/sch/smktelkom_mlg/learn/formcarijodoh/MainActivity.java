@@ -25,13 +25,44 @@ public class MainActivity extends AppCompatActivity {
         bTampilkan.setOnClickListener(new View.OnClickListener() {
                                           @Override
                                           public void onClick(View v) {
-                                              String Nama = etNama.getText().toString();
-                                              String Usia = etUsia.getText().toString();
-                                              tvHasil.setText("Saya " + Nama + " berusia " + Usia + "tahun");
-
+                                              doProcess();
                                           }
                                       }
         );
+    }
+
+    private void doProcess() {
+        if (isValid()) {
+            String Nama = etNama.getText().toString();
+            String Usia = etUsia.getText().toString();
+            tvHasil.setText("Saya " + Nama + " berusia " + Usia + "tahun");
+        }
+}
+
+    private boolean isValid() {
+        boolean valid = true;
+        String Nama = etNama.getText().toString();
+        String Usia = etUsia.getText().toString();
+
+        if (Nama.isEmpty()) {
+            etNama.setError("Nama belum diisi");
+            valid = false;
+        } else if (Nama.length() < 3) {
+            etNama.setError("Nama minimal 3 karakter");
+            valid = false;
+        } else {
+            etNama.setError(null);
+        }
+        if (Usia.isEmpty()) {
+            etUsia.setError("Usia Anda belum diisi");
+            valid = false;
+        } else if (Usia.length() != 2) {
+            etUsia.setError("Format Usia Anda bukan 2 angka");
+            valid = false;
+        } else {
+            etUsia.setError(null);
+        }
+        return valid;
     }
 }
 

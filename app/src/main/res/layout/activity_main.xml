@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="id.sch.smktelkom_mlg.learn.formcarijodoh.MainActivity">
+
+    <TextView
+        android:id="@+id/textViewjudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewhati"
+        android:layout_centerHorizontal="true"
+        android:text="Cari Jodoh"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="@dimen/abc_text_size_headline_material" />
+
+    <ImageView
+        android:id="@+id/imageViewhati"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/a" />
+
+    <TextView
+        android:id="@+id/textViewnama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/editTextnama"
+        android:text="Nama : "
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="@dimen/abc_text_size_title_material_toolbar" />
+
+    <EditText
+        android:id="@+id/editTextnama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textViewjudul"
+        android:layout_toRightOf="@+id/textViewnama" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editTextnama"
+        android:layout_alignRight="@+id/editTextnama"
+        android:layout_below="@+id/editTextnama"
+        android:spinnerMode="dropdown" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/spinner"
+        android:layout_toLeftOf="@+id/imageViewhati"
+        android:layout_toStartOf="@+id/imageViewhati">
+
+        <TextView
+            android:id="@+id/textViewjk"
+            android:layout_width="119dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Jenis Kelamin"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="@dimen/abc_text_size_subhead_material" />
+
+        <RadioButton
+            android:id="@+id/radioButtonWanita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Wanita" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Pria" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkBoxRomantis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_toEndOf="@+id/radioGroup"
+        android:layout_toRightOf="@+id/radioGroup"
+        android:checked="false"
+        android:text="Romantis" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAlim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/checkBoxRomantis"
+        android:layout_toEndOf="@+id/textViewjudul"
+        android:layout_toRightOf="@+id/textViewjudul"
+        android:checked="false"
+        android:text="Alim" />
+
+    <CheckBox
+        android:id="@+id/checkBoxHumoris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxRomantis"
+        android:layout_toEndOf="@+id/radioGroup"
+        android:layout_toRightOf="@+id/radioGroup"
+        android:checked="false"
+        android:text="Humoris" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSetia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/checkBoxAlim"
+        android:layout_alignStart="@+id/checkBoxAlim"
+        android:layout_below="@+id/checkBoxAlim"
+        android:checked="false"
+        android:text="Setia" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSerius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxHumoris"
+        android:layout_toEndOf="@+id/radioGroup"
+        android:layout_toRightOf="@+id/radioGroup"
+        android:checked="false"
+        android:text="Serius" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/checkBoxAlim"
+        android:layout_alignRight="@+id/checkBoxAlim"
+        android:layout_below="@+id/spinner"
+        android:layout_gravity="center_horizontal"
+        android:text="Tipe Pasangan "
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="@dimen/abc_text_size_subhead_material" />
+
+    <CheckBox
+        android:id="@+id/checkBoxBerkarir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/checkBoxSetia"
+        android:layout_alignStart="@+id/checkBoxSetia"
+        android:layout_below="@+id/checkBoxSetia"
+        android:checked="false"
+        android:text="Berkarir" />
+
+    <Button
+        android:id="@+id/buttonTampilkan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewjudul"
+        android:layout_alignStart="@+id/textViewjudul"
+        android:layout_below="@+id/checkBoxSerius"
+        android:text="Tampilkan " />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonTampilkan"
+        android:layout_toEndOf="@+id/checkBoxSetia"
+        android:layout_toRightOf="@+id/checkBoxSetia" />
+
+    <TextView
+        android:id="@+id/textViewHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/radioGroup"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/scrollView"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

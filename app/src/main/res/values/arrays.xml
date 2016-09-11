@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Pengalaman">
+        <item>Menjomblo selama >1 Tahun</item>
+        <item>Merasa ter-PHP oleh mantan/gebetan</item>
+        <item>Cintanya digantung berbulan-bulan</item>
+        <item>Memiliki lebih dari 1 mantan</item>
+        <item>Friendzoned tak ada kejelasan</item>
+    </string-array>
+</resources>
